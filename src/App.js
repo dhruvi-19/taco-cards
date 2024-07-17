@@ -1,5 +1,7 @@
 import TacoCard from "./TacoCard";
 import BurritoCard from "./BurritoCard";
+import Tacos from "./Tacos";
+import Burritos from "./Burritos";
 
 import CrunchyTacoSupreme from "./assets/CrunchyTacoSupreme.jpeg";
 import DoritosTacoSupreme from "./assets/DoritosTacoSupreme.jpeg";
@@ -41,12 +43,8 @@ function App() {
 
   return (
     <div className="flex gap-x-4 flex-row items-center justify-center h-screen bg-taco-gray text-center">
-      {tacos.map(({ id, name, image }) => {
-        return <TacoCard key={id} name={name} image={image} />;
-      })}
-      {burritos.map(({ id, name, image }) => {
-        return <BurritoCard key={id} name={name} image={image} />;
-      })}
+      <Tacos items={tacos} />
+      <Burritos items={burritos} />
     </div>
   );
 }
