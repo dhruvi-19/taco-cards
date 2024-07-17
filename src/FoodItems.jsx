@@ -1,5 +1,5 @@
-const FoodItems = ({ items, component: Component }) => {
-  return items.map(({ id, name, image }) => {
+const FoodItems = ({ items }) => {
+  return items.map(({ id, name, image, component: Component }) => {
     return <Component key={id} name={name} image={image} />;
   });
 };
