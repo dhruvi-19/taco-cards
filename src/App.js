@@ -1,7 +1,6 @@
 import TacoCard from "./TacoCard";
 import BurritoCard from "./BurritoCard";
-import Tacos from "./Tacos";
-import Burritos from "./Burritos";
+import FoodItems from "./FoodItems";
 
 import CrunchyTacoSupreme from "./assets/CrunchyTacoSupreme.jpeg";
 import DoritosTacoSupreme from "./assets/DoritosTacoSupreme.jpeg";
@@ -43,8 +42,8 @@ function App() {
 
   return (
     <div className="flex gap-x-4 flex-row items-center justify-center h-screen bg-taco-gray text-center">
-      <Tacos items={tacos} />
-      <Burritos items={burritos} />
+      <FoodItems items={tacos} component={TacoCard} />
+      <FoodItems items={burritos} component={BurritoCard} />
     </div>
   );
 }
